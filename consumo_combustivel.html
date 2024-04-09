@@ -9,8 +9,13 @@
 
 	 <h3> Consumo Combustível</h3>
 
+
+
 <script type="text/javascript">
    
+
+
+
    /* O tanque do seu carro tem capacidade para 50 litros.
    Utilizando gasolina, seu carro percorreu 690 Km.
    Utilizando álcool ele percorreu 523 Km,
@@ -23,23 +28,56 @@
 
    var Km1 = (690);
    var Km2 = (523);
-   var precoGasolina = 5.75 * Km1
-   var precoAlcool = 4.38 * Km2
-   var mediaPrecos = (precoGasolina + precoAlcool)
+   var precoG =  5.75
+   var precoA =  4.38
+   var precoGasolina =  (5.75 *50);
+   var precoAlcool =  (4.38 * 50);
+   var mediaGasolina = (Km1/50);
+   var mediaAlcool = (Km2/50);
+
+   var mediaPrecos1 =  ( precoG / mediaGasolina);
+   var mediaPrecos2 = ( precoA / mediaAlcool);
+
+ document.write("<table><th>Descrição</th><th>Gasolina</th><th>Álcool</th>")
+
+ document.write(`<tr><td> A media de Km/L é: </td><td>${mediaGasolina}<td>${mediaAlcool}</tr>`);
+
+ document.write(`<tr><td> Capacidade do tanque é: </td><td> 50L <td> 50L </td></tr>` ); 
+
+ document.write(`<tr><td> Custo médio por km rodado: </td><td> ${mediaPrecos1.toFixed(3)} R$/Km <td> ${mediaPrecos2.toFixed(3)} R$/Km</td></tr>`);
  
+ document.write(`<tr><td> Valor gasto para encher o tanque  R$: </td><td> R$ ${precoGasolina } <td> R$ ${precoAlcool}</td></tr>
+ </table>`);
 
-   var mediaGasolina = (690/50);
-   var mediaAlcool = (523/50);
 
- document.write(" <p> A media de Km/L de gasolina é: " + mediaGasolina);
 
- document.write(" <br> A media de Km/L de álcool é: " + mediaAlcool );
 
- document.write(" <br> A média de valor gasto em R$: " + mediaPrecos)
+ /* Tabela sbre o combustivel */
+
+
 
 
 
 </script>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+       
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+
+
 </body>
 
 </html>
